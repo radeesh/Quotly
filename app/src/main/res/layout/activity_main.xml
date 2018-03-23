@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/lib/quotly"
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    android:layout_marginTop="0dp"
+    tools:context="com.radibax.anibax.quotly.MainActivity"
+    android:animateLayoutChanges="true">
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_marginEnd="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginStart="0dp"
+        android:padding="0dp"
+        android:paddingBottom="0dp"
+        android:paddingEnd="0dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:paddingStart="0dp"
+        android:paddingTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:layout_alignParentBottom="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@android:drawable/ic_delete"
+        android:id="@+id/fab"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:visibility="invisible" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_bottom"
+        android:minHeight="?android:attr/actionBarSize"
+        android:background="@color/colorTranslucentBlack"
+        android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
+        android:popupTheme="@android:style/ThemeOverlay.Material.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible" />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTranslucentBlack"
+        android:layout_above="@+id/settings_view"
+        android:id="@+id/layout_shadow"
+        android:padding="10dp"
+        android:layout_alignBaseline="@+id/settings_view"
+        android:elevation="0dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:text="Blur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/blurTextView"
+                android:textColor="@color/colorWhite"
+                android:paddingRight="13dp" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekbar_shadow_radius"
+                android:max="40"
+                android:progress="0"
+                style="@android:style/Widget.DeviceDefault.SeekBar"
+                android:layout_alignParentStart="true"
+                android:layout_margin="10dp"
+                android:progressBackgroundTint="@color/colorWhite"
+                android:secondaryProgressTint="@color/colorWhite"
+                android:thumbTint="@color/colorWhite"
+                android:progressTint="@color/colorWhite" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:text="X-axis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/shadowXTextView"
+                android:textColor="@color/colorWhite" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekbar_shadow_x"
+                android:max="60"
+                android:progress="30"
+                style="@android:style/Widget.DeviceDefault.SeekBar"
+                android:layout_alignParentStart="true"
+                android:layout_margin="10dp"
+                android:thumbTint="@color/colorWhite"
+                android:secondaryProgressTint="@color/colorWhite"
+                android:progressTint="@color/colorWhite"
+                android:progressBackgroundTint="@color/colorWhite" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:text="Y-axis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/shadowYTextView"
+                android:textColor="@color/colorWhite" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekbar_shadow_y"
+                android:max="60"
+                android:progress="30"
+                style="@android:style/Widget.DeviceDefault.SeekBar"
+                android:layout_alignParentStart="true"
+                android:layout_margin="10dp"
+                android:progressTint="@color/colorWhite"
+                android:secondaryProgressTint="@color/colorWhite"
+                android:thumbTint="@color/colorWhite"
+                android:progressBackgroundTint="@color/colorWhite" />
+        </TableRow>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTranslucentBlack"
+        android:layout_above="@+id/settings_view"
+        android:id="@+id/layout_fontselect"
+        android:padding="10dp"
+        android:layout_alignBaseline="@+id/settings_view"
+        android:elevation="0dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:text="Quote Font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/quoteAuthorTextView"
+                android:textColor="@color/colorWhite"
+                android:paddingRight="15dp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fontQuoteSpinner"
+                android:spinnerMode="dialog" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:text="Author Font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fontAuthorTextView"
+                android:textColor="@color/colorWhite"
+                android:paddingRight="15dp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fontAuthorSpinner" />
+
+        </TableRow>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTranslucentBlack"
+        android:layout_above="@+id/settings_view"
+        android:id="@+id/layout_fontsize"
+        android:padding="10dp"
+        android:layout_alignBaseline="@+id/settings_view"
+        android:elevation="0dp">
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/font_seekBar"
+            android:max="350"
+            android:progress="0"
+            style="@android:style/Widget.DeviceDefault.SeekBar"
+            android:layout_alignParentStart="true"
+            android:progressTint="@color/colorWhite"
+            android:secondaryProgressTint="@color/colorWhite"
+            android:thumbTint="@color/colorWhite"
+            android:progressBackgroundTint="@color/colorWhite" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTranslucentBlack"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app2:srcCompat="@drawable/ic_action_settings"
+            android:background="@null"
+            android:id="@+id/action_settings"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:padding="@dimen/button_padding"
+            android:onClick="onClick" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app2:srcCompat="@drawable/ic_action_change_quote"
+            android:background="@null"
+            android:id="@+id/action_change_quote"
+            android:layout_below="@+id/seekbar_container"
+            android:padding="@dimen/button_padding"
+            android:onClick="onClick"
+            android:layout_alignParentStart="true"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app2:srcCompat="@drawable/ic_action_set_wallpaper"
+            android:background="@null"
+            android:id="@+id/action_set_wallpaper"
+            android:layout_alignBottom="@+id/action_change_quote"
+            android:padding="@dimen/button_padding"
+            android:onClick="onClick"
+            android:layout_toEndOf="@+id/action_change_quote" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app2:srcCompat="@drawable/ic_action_change_color"
+            android:background="@null"
+            android:padding="@dimen/button_padding"
+            android:onClick="onClick"
+            android:id="@+id/action_change_color" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app2:srcCompat="@drawable/ic_action_invert_color"
+            android:background="@null"
+            android:padding="@dimen/button_padding"
+            android:onClick="onClick"
+            android:id="@+id/action_invert_color" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/settings_view"
+        android:background="@color/colorTranslucentBlack"
+        android:layout_above="@+id/toolbar_bottom"
+        android:scrollbars="none"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/layout_settings"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@drawable/ic_action_quote_alignment"
+                android:id="@+id/btnAlignment"
+                android:onClick="onFontAlignmentClicked"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@drawable/ic_action_change_size"
+                android:id="@+id/btnFontSize"
+                android:onClick="onFontSizeClicked"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@drawable/ic_action_bold"
+                android:id="@+id/btnTypeface"
+                android:onClick="onTypeFaceClicked"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@drawable/ic_action_author"
+                android:id="@+id/btnAuthorToggle"
+                android:onClick="onAuthorClicked"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@drawable/ic_action_change_shadow"
+                android:id="@+id/btnShadow"
+                android:onClick="onShadowClicked"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_change_font"
+                android:id="@+id/btnChangeFont"
+                android:onClick="onFontSelectClicked"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_edit_text"
+                android:id="@+id/btnEditText"
+                android:onClick="onEditTextClicked"
+                android:layout_margin="10dp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

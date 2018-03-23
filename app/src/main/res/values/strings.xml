@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Quotly</string>
+    <string name="title_activity_fab">FabActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="action_set_wallpaper">Set Wallpaper</string>
+    <string name="action_change_quote">Change Quote</string>
+    <string name="action_change_color">Change Color</string>
+    <string name="action_change_size">Change Font Size</string>
+    <string name="action_invert_color">Invert Color</string>
+    <string name="action_quote_alignment">Align Quote</string>
+
+<string-array name="font_arrays">
+    <item>Aclonica</item>
+    <item>Bahiana</item>
+    <item>Barrio</item>
+    <item>Bowlby One</item>
+    <item>Bungee Hairline</item>
+    <item>Cabin Sketch</item>
+    <item>Cinzel Decorative</item>
+    <item>Codystar</item>
+    <item>Comili</item>
+    <item>Doodle</item>
+    <item>Finger Paint</item>
+    <item>Fluent Sans</item>
+    <item>Fontdiner Swanky</item>
+    <item>Frijole</item>
+    <item>Inconsolata</item>
+    <item>Josefin Slab</item>
+    <item>Kaushan Script</item>
+    <item>Lora</item>
+    <item>Monoton</item>
+    <item>Montserrat Subrayada</item>
+    <item>Orbitron</item>
+    <item>Pacifico</item>
+    <item>Permanent Marker</item>
+    <item>PoiretOne</item>
+    <item>Raleway</item>
+    <item>Sacramento</item>
+    <item>Sansita</item>
+    <item>Satisfy</item>
+    <item>Special Elite</item>
+    <item>VT323</item>
+    <item>Waiting for the Sunrise</item>
+    <item>Yasnas Hand</item>
+</string-array>
+
+</resources>

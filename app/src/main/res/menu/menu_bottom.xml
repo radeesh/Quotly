@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_quote_alignment"
+        android:icon="@drawable/ic_action_quote_alignment"
+        android:title="@string/action_quote_alignment"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_change_size"
+        android:icon="@drawable/ic_action_change_size"
+        android:title="@string/action_change_size"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_change_quote"
+        android:icon="@drawable/ic_action_change_quote"
+        android:title="@string/action_change_quote"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_set_wallpaper"
+        android:icon="@drawable/ic_action_set_wallpaper"
+        android:title="@string/action_set_wallpaper"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_change_color"
+        android:icon="@drawable/ic_action_change_color"
+        android:title="@string/action_change_color"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_invert_color"
+        android:icon="@drawable/ic_action_invert_color"
+        android:title="@string/action_invert_color"
+        app:showAsAction="always"/>
+</menu>
